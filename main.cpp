@@ -1,11 +1,16 @@
+#include "logger.h"
 #include <iostream>
-#include <string>
+
+#define debug(x...)                                                                                                    \
+    std::cout << __FUNCTION__ << ":" << __LINE__ << " -> " << #x << "=";                                               \
+    logger(x);
 
 int main() {
-    std::string name = "Matt";
-    std::string favoriteFood = "streak";
+    const double PI = 3.14159;
+    double radius = 20;
+    double circum = 2 * PI * radius;
 
-    std::cout << "Hello, my name is" << name << "and I like" << favoriteFood << std::endl;
+    debug(circum);
 
     return 0;
 }
