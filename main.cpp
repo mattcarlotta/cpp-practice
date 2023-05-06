@@ -1,16 +1,16 @@
-#include "logger.h"
+#include "debug.hpp"
 #include <iostream>
 
-#define debug(x...)                                                                                                    \
+#define log(x...)                                                                                                      \
     std::cout << __FUNCTION__ << ":" << __LINE__ << " -> " << #x << "=";                                               \
-    logger(x);
+    debug::logger(x);
 
 int main() {
     const double PI = 3.14159;
     double radius = 20;
     double circum = 2 * PI * radius;
 
-    debug(circum);
+    log(circum);
 
     return 0;
 }

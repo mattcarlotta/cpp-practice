@@ -12,6 +12,7 @@
 // #define rall(x) x.rbegin(), x.rend()
 // #define ins insert
 
+namespace debug {
 using std::cout;
 using std::endl;
 using std::pair;
@@ -53,6 +54,7 @@ template <typename T, typename... V> void _print(T t, V... v) {
     _print(v...);
 }
 inline void _print() { cout << "]\n"; }
+} // namespace debug
 
 // #define dbg(x...)                                                                                                      \
 //     cout << "[" << __func__ << ":" << __LINE__ - 9 << " [" << #x << "] = [";                                           \
