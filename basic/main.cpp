@@ -1,4 +1,6 @@
 #include "debug.hpp"
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <string>
 
@@ -32,6 +34,14 @@ int main() {
     int q = 10;
     double s = c / (double)q * 100;
     log(s);
+    int maxNum = std::max(c, q);
+    log(maxNum);
+
+    // cmath
+    int qPow = pow(2, 3);
+    log(qPow);
+    int qSqrt = sqrt(qPow);
+    log(qSqrt);
 
     text_t firstName = "Matt";
     log(firstName);

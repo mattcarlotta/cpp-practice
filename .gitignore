@@ -1,4 +1,4 @@
-main
-cmake_install.cmake
-/CMakeFiles
-CMakeCache.txt
+**/main
+**/cmake_install.cmake
+**/CMakeFiles
+*CMakeCache.txt
