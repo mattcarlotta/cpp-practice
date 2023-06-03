@@ -1,9 +1,11 @@
 #include "debug.hpp"
+#include <array>
 #include <cmath>
 #include <iostream>
 #include <map>
 #include <string>
 #include <utility>
+#include <vector>
 
 #define log(x...)                                                                                                      \
     std::cout << __FUNCTION__ << ":" << __LINE__ << " -> " << #x << "=";                                               \
@@ -11,26 +13,23 @@
 
 using std::cin;
 using std::cout;
-using std::map;
 using std::string;
-
-map<int, string> Months{{1, "January"},   {2, "Feburary"}, {3, "March"},     {4, "April"},
-                        {5, "May"},       {6, "June"},     {7, "July"},      {8, "August"},
-                        {9, "September"}, {10, "October"}, {11, "November"}, {12, "December"}};
+using std::vector;
 
 int main() {
+    vector<string> Months{"January", "Feburary", "March",     "April",   "May",      "June",
+                          "July",    "August",   "September", "October", "November", "December"};
     int monthInt;
 
     cout << "Enter your birthday month as a number: ";
     cin >> monthInt;
 
-    string month = Months[monthInt];
-
-    if (!month.length()) {
+    if (monthInt < 1 || monthInt > 12) {
         cout << "Not a valid month."
              << " "
              << "Please enter a number between 1-12." << '\n';
     } else {
+        string month = Months[monthInt - 1];
         cout << "Your birthday is in " << month << "." << '\n';
     }
 
